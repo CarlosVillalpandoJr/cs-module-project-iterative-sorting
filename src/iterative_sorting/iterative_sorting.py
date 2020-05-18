@@ -21,10 +21,12 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     for i in range(len(arr)):
-        for j in range(i+1, len(arr)):
-            if arr[i] > arr[j]:
-                arr[i], arr[j] = arr[j], arr[i]
+        for j in range(0, len(arr)-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
+
+print(bubble_sort([2,1,0,5,4]))
 
 
 # STRETCH: implement the Count Sort function below
