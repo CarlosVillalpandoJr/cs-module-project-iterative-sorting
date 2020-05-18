@@ -26,7 +26,20 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
-print(bubble_sort([2,1,0,5,4]))
+# print(bubble_sort([2,1,0,5,4]))
+
+
+def my_selection(array):
+    for i in range(len(array)):
+        curr = i
+        smallest = curr
+        for j in range(smallest, len(array)):
+            if array[smallest] > array[j]:
+                smallest = j
+        array[curr], array[smallest] = array[smallest], array[curr]
+    return array
+
+print(my_selection([2,1,0,5,4]))
 
 
 # STRETCH: implement the Count Sort function below
